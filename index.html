@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cemani World</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f3ee;color:#242424}
+header{background:#171717;color:white;padding:25px 20px;text-align:center}
+h1{margin:5px 0;letter-spacing:2px}
+header p{color:#d5b578;font-size:12px;letter-spacing:2px}
+main{padding:20px;max-width:600px;margin:auto}
+select{padding:12px;border:1px solid #ccc;border-radius:10px;background:white;width:100%;font-size:16px}
+.card{background:white;border-radius:16px;padding:22px;margin-top:18px;box-shadow:0 2px 8px #00000012}
+h2{margin-top:0}
+button{width:100%;padding:14px;margin-top:10px;background:#171717;color:white;border:0;border-radius:10px;font-size:16px}
+footer{text-align:center;color:#777;font-size:12px;padding:25px}
+</style>
+</head>
+<body>
+<header>
+<h1>🐓 CEMANI WORLD</h1>
+<p>INTERNATIONAL BREEDING NETWORK</p>
+</header>
+<main>
+<select id="language" onchange="translatePage()">
+<option value="en">English</option>
+<option value="de">Deutsch</option>
+<option value="fr">Français</option>
+<option value="nl">Nederlands</option>
+<option value="id">Bahasa Indonesia</option>
+</select>
+<div class="card">
+<h2 id="welcome">Welcome to Cemani World</h2>
+<p id="intro">Your international platform for Cemani breeding.</p>
+</div>
+<div class="card">
+<h2 id="book">My Breeding Book</h2>
+<p id="bookText">Manage your birds, pedigrees and breeding lines.</p>
+<button id="openBook" onclick="alert('Breeding book coming next!')">Open breeding book</button>
+</div>
+<div class="card">
+<h2 id="network">Worldwide Breeder Network</h2>
+<p id="networkText">Connect with breeders around the world.</p>
+</div>
+</main>
+<footer>CEMANI WORLD · Prototype 0.1</footer>
+<script>
+const translations={
+en:["Welcome to Cemani World","Your international platform for Cemani breeding.","My Breeding Book","Manage your birds, pedigrees and breeding lines.","Open breeding book","Worldwide Breeder Network","Connect with breeders around the world."],
+de:["Willkommen bei Cemani World","Deine internationale Plattform für die Cemani Zucht.","Mein Zuchtbuch","Verwalte deine Tiere, Abstammungen und Zuchtlinien.","Zuchtbuch öffnen","Weltweites Züchternetzwerk","Vernetze dich mit Züchtern auf der ganzen Welt."],
+fr:["Bienvenue sur Cemani World","Votre plateforme internationale pour l'élevage de Cemani.","Mon registre d'élevage","Gérez vos animaux, pedigrees et lignées.","Ouvrir le registre","Réseau mondial d'éleveurs","Échangez avec des éleveurs du monde entier."],
+nl:["Welkom bij Cemani World","Jouw internationale platform voor Cemani fokkerij.","Mijn fokregister","Beheer je dieren, stambomen en foklijnen.","Open fokregister","Wereldwijd fokkersnetwerk","Kom in contact met fokkers wereldwijd."],
+id:["Selamat datang di Cemani World","Platform internasional untuk peternak Cemani.","Buku Pembiakan Saya","Kelola ayam, silsilah, dan garis keturunan.","Buka buku pembiakan","Jaringan Peternak Dunia","Terhubung dengan peternak di seluruh dunia."]
+};
+function translatePage(){
+const lang=document.getElementById("language").value;
+const ids=["welcome","intro","book","bookText","openBook","network","networkText"];
+ids.forEach((id,i)=>document.getElementById(id).textContent=translations[lang][i]);
+document.documentElement.lang=lang;
+}
+</script>
+</body>
+</html>
