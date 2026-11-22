@@ -11,6 +11,7 @@ header{background:#171717;color:white;padding:25px 20px;text-align:center}
 h1{margin:5px 0;letter-spacing:2px}
 header p{color:#d5b578;font-size:12px;letter-spacing:2px}
 main{padding:20px;max-width:600px;margin:auto}
+label{display:block;margin:0 0 8px;font-size:14px;font-weight:bold}
 select{padding:12px;border:1px solid #ccc;border-radius:10px;background:white;width:100%;font-size:16px}
 .card{background:white;border-radius:16px;padding:22px;margin-top:18px;box-shadow:0 2px 8px #00000012}
 h2{margin-top:0}
@@ -24,12 +25,42 @@ footer{text-align:center;color:#777;font-size:12px;padding:25px}
 <p>INTERNATIONAL BREEDING NETWORK</p>
 </header>
 <main>
+<label for="language" id="languageLabel">🌍 Sprache / Language</label>
 <select id="language" onchange="translatePage()">
-<option value="en">English</option>
-<option value="de">Deutsch</option>
-<option value="fr">Français</option>
-<option value="nl">Nederlands</option>
-<option value="id">Bahasa Indonesia</option>
+  <option value="en">English</option>
+  <option value="de">Deutsch</option>
+  <option value="fr">Français</option>
+  <option value="nl">Nederlands</option>
+  <option value="id">Bahasa Indonesia</option>
+  <option value="ru">Русский</option>
+  <option value="ro">Română</option>
+  <option value="sr-Latn">Srpski (latinica)</option>
+  <option value="sr-Cyrl">Српски (ћирилица)</option>
+  <option value="uk">Українська</option>
+  <option value="pl">Polski</option>
+  <option value="cs">Čeština</option>
+  <option value="sk">Slovenčina</option>
+  <option value="hu">Magyar</option>
+  <option value="bg">Български</option>
+  <option value="hr">Hrvatski</option>
+  <option value="bs">Bosanski</option>
+  <option value="sl">Slovenščina</option>
+  <option value="mk">Македонски</option>
+  <option value="el">Ελληνικά</option>
+  <option value="es">Español</option>
+  <option value="pt">Português</option>
+  <option value="it">Italiano</option>
+  <option value="da">Dans</option>
+  <option value="sv">Svenska</option>
+  <option value="no">Norsk</option>
+  <option value="fi">Suomi</option>
+  <option value="tr">Türkçe</option>
+  <option value="ar">العربية</option>
+  <option value="zh">中文</option>
+  <option value="ja">日本語</option>
+  <option value="ko">한국어</option>
+  <option value="vi">Tiếng Việt</option>
+  <option value="th">ไทย</option>
 </select>
 <div class="card">
 <h2 id="welcome">Welcome to Cemani World</h2>
@@ -53,13 +84,60 @@ de:["Willkommen bei Cemani World","Deine internationale Plattform für die Ceman
 fr:["Bienvenue sur Cemani World","Votre plateforme internationale pour l'élevage de Cemani.","Mon registre d'élevage","Gérez vos animaux, pedigrees et lignées.","Ouvrir le registre","Réseau mondial d'éleveurs","Échangez avec des éleveurs du monde entier."],
 nl:["Welkom bij Cemani World","Jouw internationale platform voor Cemani fokkerij.","Mijn fokregister","Beheer je dieren, stambomen en foklijnen.","Open fokregister","Wereldwijd fokkersnetwerk","Kom in contact met fokkers wereldwijd."],
 id:["Selamat datang di Cemani World","Platform internasional untuk peternak Cemani.","Buku Pembiakan Saya","Kelola ayam, silsilah, dan garis keturunan.","Buka buku pembiakan","Jaringan Peternak Dunia","Terhubung dengan peternak di seluruh dunia."]
+,
+"ru":["Добро пожаловать в Cemani World", "Международная платформа для разведения кур породы Cemani.", "Моя племенная книга", "Управляйте птицами, родословными и племенными линиями.", "Открыть племенную книгу", "Международная сеть заводчиков", "Общайтесь с заводчиками по всему миру."],
+"ro":["Bine ai venit la Cemani World", "Platforma ta internațională pentru creșterea păsărilor Cemani.", "Registrul meu de reproducție", "Gestionează păsările, pedigree-urile și liniile de reproducție.", "Deschide registrul", "Rețeaua mondială a crescătorilor", "Conectează-te cu crescători din întreaga lume."],
+"sr-Latn":["Dobro došli u Cemani World", "Vaša međunarodna platforma za uzgoj Cemani živine.", "Moja uzgojna evidencija", "Upravljajte pticama, pedigreima i uzgojnim linijama.", "Otvori evidenciju", "Svetska mreža odgajivača", "Povežite se sa odgajivačima širom sveta."],
+"sr-Cyrl":["Добро дошли у Cemani World", "Ваша међународна платформа за узгој Cemani живине.", "Моја узгојна евиденција", "Управљајте птицама, педигреима и узгојним линијама.", "Отвори евиденцију", "Светска мрежа одгајивача", "Повежите се са одгајивачима широм света."],
+"uk":["Ласкаво просимо до Cemani World", "Ваша міжнародна платформа для розведення Cemani.", "Моя племінна книга", "Керуйте птахами, родоводами та племінними лініями.", "Відкрити племінну книгу", "Всесвітня мережа заводчиків", "Спілкуйтеся із заводчиками з усього світу."],
+"pl":["Witamy w Cemani World", "Twoja międzynarodowa platforma hodowli Cemani.", "Moja księga hodowlana", "Zarządzaj ptakami, rodowodami i liniami hodowlanymi.", "Otwórz księgę hodowlaną", "Światowa sieć hodowców", "Nawiązuj kontakty z hodowcami na całym świecie."],
+"cs":["Vítejte v Cemani World", "Vaše mezinárodní platforma pro chov Cemani.", "Moje plemenná kniha", "Spravujte své ptáky, rodokmeny a chovné linie.", "Otevřít plemennou knihu", "Celosvětová síť chovatelů", "Spojte se s chovateli z celého světa."],
+"sk":["Vitajte v Cemani World", "Vaša medzinárodná platforma pre chov Cemani.", "Moja plemenná kniha", "Spravujte vtáky, rodokmene a chovné línie.", "Otvoriť plemennú knihu", "Celosvetová sieť chovateľov", "Spojte sa s chovateľmi z celého sveta."],
+"hu":["Üdvözöljük a Cemani World oldalán", "Nemzetközi platform a Cemani tenyésztéséhez.", "Tenyésztési nyilvántartásom", "Kezelje madarait, törzskönyveit és tenyészvonalait.", "Nyilvántartás megnyitása", "Tenyésztők világméretű hálózata", "Lépjen kapcsolatba tenyésztőkkel világszerte."],
+"bg":["Добре дошли в Cemani World", "Вашата международна платформа за развъждане на Cemani.", "Моята племенна книга", "Управлявайте птиците, родословията и развъдните линии.", "Отвори племенната книга", "Световна мрежа на развъдчиците", "Свържете се с развъдчици по целия свят."],
+"hr":["Dobro došli u Cemani World", "Vaša međunarodna platforma za uzgoj Cemani peradi.", "Moja uzgojna knjiga", "Upravljajte pticama, rodovnicima i uzgojnim linijama.", "Otvori uzgojnu knjigu", "Svjetska mreža uzgajivača", "Povežite se s uzgajivačima diljem svijeta."],
+"bs":["Dobro došli u Cemani World", "Vaša međunarodna platforma za uzgoj Cemani peradi.", "Moja uzgojna knjiga", "Upravljajte pticama, rodovnicima i uzgojnim linijama.", "Otvori uzgojnu knjigu", "Svjetska mreža uzgajivača", "Povežite se s uzgajivačima širom svijeta."],
+"sl":["Dobrodošli v Cemani World", "Vaša mednarodna platforma za vzrejo Cemani.", "Moja vzrejna knjiga", "Upravljajte s pticami, rodovniki in vzrejnimi linijami.", "Odpri vzrejno knjigo", "Svetovna mreža rejcev", "Povežite se z rejci po vsem svetu."],
+"mk":["Добредојдовте во Cemani World", "Вашата меѓународна платформа за одгледување Cemani.", "Мојата одгледувачка книга", "Управувајте со птиците, педигреата и одгледувачките линии.", "Отвори ја книгата", "Светска мрежа на одгледувачи", "Поврзете се со одгледувачи од целиот свет."],
+"el":["Καλώς ήρθατε στο Cemani World", "Η διεθνής πλατφόρμα σας για την εκτροφή Cemani.", "Το βιβλίο εκτροφής μου", "Διαχειριστείτε τα πτηνά, τα γενεαλογικά δέντρα και τις γραμμές εκτροφής.", "Άνοιγμα βιβλίου εκτροφής", "Παγκόσμιο δίκτυο εκτροφέων", "Συνδεθείτε με εκτροφείς σε όλο τον κόσμο."],
+"es":["Bienvenido a Cemani World", "Tu plataforma internacional para la cría de Cemani.", "Mi libro de cría", "Gestiona tus aves, pedigríes y líneas de cría.", "Abrir libro de cría", "Red mundial de criadores", "Conecta con criadores de todo el mundo."],
+"pt":["Bem-vindo ao Cemani World", "A sua plataforma internacional para a criação de Cemani.", "O meu livro de criação", "Gira as suas aves, pedigrees e linhagens de criação.", "Abrir livro de criação", "Rede mundial de criadores", "Ligue-se a criadores de todo o mundo."],
+"it":["Benvenuto su Cemani World", "La tua piattaforma internazionale per l’allevamento di Cemani.", "Il mio registro di allevamento", "Gestisci i tuoi animali, pedigree e linee di allevamento.", "Apri il registro", "Rete mondiale di allevatori", "Entra in contatto con allevatori di tutto il mondo."],
+"da":["Velkommen til Cemani World", "Din internationale platform til opdræt af Cemani.", "Min avlsbog", "Administrer dine fugle, stamtavler og avlslinjer.", "Åbn avlsbog", "Verdensomspændende opdrætternetværk", "Få kontakt med opdrættere over hele verden."],
+"sv":["Välkommen till Cemani World", "Din internationella plattform för Cemani-avel.", "Min avelsbok", "Hantera dina fåglar, stamtavlor och avelslinjer.", "Öppna avelsboken", "Globalt uppfödarnätverk", "Få kontakt med uppfödare över hela världen."],
+"no":["Velkommen til Cemani World", "Din internasjonale plattform for Cemani-avl.", "Min avlsbok", "Administrer fuglene dine, stamtavler og avlslinjer.", "Åpne avlsboken", "Globalt oppdretternettverk", "Kom i kontakt med oppdrettere over hele verden."],
+"fi":["Tervetuloa Cemani Worldiin", "Kansainvälinen alustasi Cemani-jalostukseen.", "Oma jalostuskirjani", "Hallinnoi lintujasi, sukutauluja ja jalostuslinjoja.", "Avaa jalostuskirja", "Maailmanlaajuinen kasvattajaverkosto", "Verkostoidu kasvattajien kanssa ympäri maailmaa."],
+"tr":["Cemani World’e hoş geldiniz", "Cemani yetiştiriciliği için uluslararası platformunuz.", "Yetiştirme kayıt defterim", "Kuşlarınızı, soy ağaçlarını ve yetiştirme hatlarını yönetin.", "Kayıt defterini aç", "Dünya çapında yetiştirici ağı", "Dünyanın dört bir yanındaki yetiştiricilerle bağlantı kurun."],
+"ar":["مرحبًا بك في Cemani World", "منصتك الدولية لتربية دجاج Cemani.", "سجل التربية الخاص بي", "أدر طيورك وأنسابها وسلالات التربية.", "فتح سجل التربية", "شبكة المربين العالمية", "تواصل مع المربين حول العالم."],
+"zh":["欢迎来到 Cemani World", "您的国际 Cemani 育种平台。", "我的育种记录", "管理您的家禽、系谱和育种品系。", "打开育种记录", "全球育种者网络", "与世界各地的育种者建立联系。"],
+"ja":["Cemani Worldへようこそ", "Cemaniの繁殖のための国際プラットフォームです。", "私の繁殖記録", "飼育鳥、血統、繁殖系統を管理します。", "繁殖記録を開く", "世界のブリーダーネットワーク", "世界中のブリーダーとつながりましょう。"],
+"ko":["Cemani World에 오신 것을 환영합니다", "Cemani 사육을 위한 국제 플랫폼입니다.", "나의 번식 기록", "개체, 혈통 및 번식 계통을 관리하세요.", "번식 기록 열기", "전 세계 사육자 네트워크", "전 세계 사육자들과 소통하세요."],
+"vi":["Chào mừng đến với Cemani World", "Nền tảng quốc tế dành cho người nuôi Cemani.", "Sổ giống của tôi", "Quản lý đàn gà, phả hệ và các dòng giống.", "Mở sổ giống", "Mạng lưới người nuôi toàn cầu", "Kết nối với người nuôi trên khắp thế giới."],
+"th":["ยินดีต้อนรับสู่ Cemani World", "แพลตฟอร์มนานาชาติสำหรับการเพาะพันธุ์ Cemani", "สมุดบันทึกการเพาะพันธุ์ของฉัน", "จัดการสัตว์ปีก สายเลือด และสายพันธุ์ของคุณ", "เปิดสมุดบันทึก", "เครือข่ายผู้เพาะพันธุ์ทั่วโลก", "เชื่อมต่อกับผู้เพาะพันธุ์ทั่วโลก"]
 };
-function translatePage(){
-const lang=document.getElementById("language").value;
 const ids=["welcome","intro","book","bookText","openBook","network","networkText"];
-ids.forEach((id,i)=>document.getElementById(id).textContent=translations[lang][i]);
-document.documentElement.lang=lang;
+function translatePage(){
+ const lang=document.getElementById("language").value;
+ const words=translations[lang] || translations.en;
+ ids.forEach((id,i)=>document.getElementById(id).textContent=words[i]);
+ document.documentElement.lang=lang;
+ document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+ try{localStorage.setItem("cemani-language",lang)}catch(e){}
 }
+(function initLanguage(){
+ const picker=document.getElementById("language");
+ let saved="";
+ try{saved=localStorage.getItem("cemani-language")||""}catch(e){}
+ const browser=(navigator.languages||[navigator.language||"en"]);
+ const matched=browser.map(x=>x.toLowerCase()).map(x=>{
+  if(x.startsWith("sr-cyrl"))return "sr-Cyrl";
+  if(x.startsWith("sr"))return "sr-Latn";
+  if(x.startsWith("zh"))return "zh";
+  return x.split("-")[0];
+ }).find(x=>translations[x]);
+ picker.value=translations[saved]?saved:(matched||"en");
+ translatePage();
+})();
 </script>
 </body>
 </html>
