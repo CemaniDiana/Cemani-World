@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mitglieder | Cemani World</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #171310;
+  color: #f5ead7;
+  font-family: Arial, sans-serif;
+}
+header {
+  text-align: center;
+  padding: 35px 15px;
+  background: #100e0d;
+  border-bottom: 2px solid #b99750;
+}
+h1 { color: #dfc17b; margin-bottom: 8px; }
+h2 { color: #dfc17b; }
+.subtitle { letter-spacing: 2px; font-size: 12px; }
+main { max-width: 900px; margin: auto; padding: 25px 15px; }
+.card {
+  background: #25201c;
+  border: 1px solid #a98a49;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 22px;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 13px;
+  margin: 8px 0 16px;
+  border: 1px solid #b99750;
+  border-radius: 7px;
+  background: #fff;
+  color: #222;
+  font-size: 16px;
+}
+label { display: block; }
+button, .button {
+  display: inline-block;
+  background: #c6a45e;
+  color: #171310;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+button:hover, .button:hover { background: #e3c784; }
+footer { text-align: center; padding: 30px; color: #b9a88c; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>CEMANI WORLD</h1>
+  <p class="subtitle">INTERNATIONAL BREEDING NETWORK</p>
+  <p>🌍 Mitglieder | Members</p>
+</header>
+
+<main>
+  <a class="button" href="index.html">← Startseite</a>
+
+  <section class="card">
+    <h2>Willkommen im Züchternetzwerk</h2>
+    <p>
+      Cemani World verbindet Züchter und Liebhaber
+      der Cemani auf der ganzen Welt.
+    </p>
+    <p>
+      Tausche Erfahrungen aus, entdecke internationale
+      Zuchtlinien und knüpfe neue Kontakte.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🌍 Internationale Mitglieder</h2>
+    <p>
+      Hier entsteht unser weltweites Züchterverzeichnis.
+      Mitglieder können später ihre Zucht vorstellen
+      und selbst entscheiden, welche Informationen
+      öffentlich sichtbar sein sollen.
+    </p>
+    <p>Das Verzeichnis befindet sich im Aufbau.</p>
+  </section>
+
+  <section class="card">
+    <h2>🐓 Züchterprofil vorbereiten</h2>
+    <p>
+      So könnte dein zukünftiges Züchterprofil aussehen.
+      Die Eingaben werden noch nicht gespeichert
+      oder übermittelt.
+    </p>
+
+    <label for="name">Name oder Zuchtstättenname</label>
+    <input id="name" type="text" placeholder="Name der Zucht">
+
+    <label for="country">Land / Country</label>
+    <select id="country">
+      <option value="">Bitte Land auswählen</option>
+      <option>Deutschland</option>
+      <option>Indonesien</option>
+      <option>Frankreich</option>
+      <option>Niederlande</option>
+      <option>Belgien</option>
+      <option>USA</option>
+      <option>Russland</option>
+      <option>Rumänien</option>
+      <option>Serbien</option>
+      <option>Polen</option>
+      <option>Vereinigtes Königreich</option>
+      <option>Anderes Land</option>
+    </select>
+
+    <label for="description">Über meine Zucht</label>
+    <textarea id="description" rows="5"
+      placeholder="Erzähle etwas über deine Cemani"></textarea>
+
+    <button type="button" onclick="showNotice()">
+      Profilvorschau
+    </button>
+    <p id="notice" role="status"></p>
+  </section>
+</main>
+
+<footer>
+  © 2026 Cemani World
+</footer>
+
+<script>
+function showNotice() {
+  document.getElementById("notice").textContent =
+    "Dies ist eine Vorschau. Eine Registrierung und " +
+    "Datenspeicherung werden erst später eingerichtet.";
+}
+</script>
+</body>
+</html>
