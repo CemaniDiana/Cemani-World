@@ -152,5 +152,50 @@ function showNotice() {
     "Datenspeicherung werden erst später eingerichtet.";
 }
 </script>
+  
+<script>
+const memberTranslations = {
+  de: {
+    welcome: "Willkommen im Züchternetzwerk",
+    members: "Internationale Mitglieder",
+    profile: "Züchterprofil vorbereiten"
+  },
+  en: {
+    welcome: "Welcome to the Breeders Network",
+    members: "International Members",
+    profile: "Prepare Breeder Profile"
+  },
+  fr: {
+    welcome: "Bienvenue dans le réseau des éleveurs",
+    members: "Membres internationaux",
+    profile: "Préparer le profil d'éleveur"
+  },
+  ru: {
+    welcome: "Добро пожаловать в сеть заводчиков",
+    members: "Международные участники",
+    profile: "Создать профиль заводчика"
+  },
+  id: {
+    welcome: "Selamat datang di jaringan peternak",
+    members: "Anggota internasional",
+    profile: "Siapkan profil peternak"
+  }
+};
+
+function changeMemberLanguage() {
+  const lang = document.getElementById("memberLanguage").value;
+  const t = memberTranslations[lang];
+  const headings = document.querySelectorAll("main section.card h2");
+
+  if (headings.length >= 3) {
+    headings[0].textContent = t.welcome;
+    headings[1].textContent = "🌍 " + t.members;
+    headings[2].textContent = "🐓 " + t.profile;
+  }
+
+  document.documentElement.lang = lang;
+}
+</script>
+
 </body>
 </html>
